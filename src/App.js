@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Route} from "react-router-dom";
+import Mounting from './Mounting'
+import Unmounting from "./Unmounting"
+import Updating from "./Updating"
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      
+        <Route exact path='/mounting' component={Mounting} />
+        <Route path='/unmounting' component={Unmounting} />
+        <Route path='/updating' component={Updating} />
+
+
+       
+      <h1> bye</h1>
+        </>
   );
 }
 
